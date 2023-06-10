@@ -1,5 +1,4 @@
-import java.util.Arrays;
-// import org.apache.commons.lang3.ArrayUtils;
+import org.apache.commons.lang3.ArrayUtils;
 
 // Basic class definition
 // public means thi class can be used by other classes
@@ -38,6 +37,17 @@ public class LessonEight
         Monsters[1] = new MonsterTwo(500, 40, 2, "Drac");
         Monsters[2] = new MonsterTwo(1000, 20, 1, "Paul");
         Monsters[3] = new MonsterTwo(1000, 20 ,1, "George");
+
+        MonsterTwo.redrawBoard();
+
+        for (MonsterTwo m : Monsters)
+        {
+            if (m.getAlive())
+            {
+                int arrayItemIndex = ArrayUtils.indexOf(Monsters, m);
+                m.moveMonster(Monsters, arrayItemIndex);
+            }
+        }
 
         MonsterTwo.redrawBoard();
     }
