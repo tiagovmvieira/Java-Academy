@@ -48,4 +48,21 @@ public class Vehicle extends Crashable implements Drivable {
         return this.carStrength;
     }
 
+    public String toString(){
+        return "Num of Wheels: " + this.numOfWheels;
+    }
+
+    public Object clone(){
+        Vehicle car;
+
+        try{
+            car = (Vehicle) super.clone();
+        }
+
+        catch(CloneNotSupportedException e){
+            return null;
+        }
+        return car;
+    }
+
 }
