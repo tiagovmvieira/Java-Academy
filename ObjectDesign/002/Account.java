@@ -12,9 +12,9 @@ public class Account
     static int accountNumberIncrementor = 100000;
 
     // constructor
-    public Account(int theBankID, String customerName, String accType, double acctBalance, int pin){
+    public Account(int BankID, String customerName, String accType, double acctBalance, int pin){
 
-        this.bankID = theBankID;
+        this.bankID = BankID;
         this.customerName = customerName;
         this.acctType = accType;
         this.acctBalance = acctBalance;
@@ -34,9 +34,10 @@ public class Account
     public void setAcctBalance(double newAcctBalance) {
 
         this.acctBalance = newAcctBalance;
+
     }
 
-    public int getPin() { return pin; }
+    public int getPIN() { return pin; }
     public int getStripNumber() { return stripNumber; }
 
     // Generates strip numbers by adding the bankID to the front
@@ -56,7 +57,7 @@ public class Account
 
         if((acctType.startsWith("s")) || (acctType.startsWith("S"))){
 
-            // Savings is stripNumber with a 1 at the end
+            // Savings are stripNumber with a 1 at the end
             acctNumber = (stripNumber * 10) + 1;
         } else {
 
@@ -65,6 +66,7 @@ public class Account
         }
 
         return acctNumber;
+
     }
 
 
