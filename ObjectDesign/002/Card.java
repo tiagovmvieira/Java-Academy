@@ -22,7 +22,7 @@ public class Card {
         this.stripNumber = stripNumber;
     }
 
-    public int getPin(){ return pin; }
+    public int getPIN(){ return pin; }
     public int getStripNumber(){ return stripNumber; }
 
     public void setPin(int pin){
