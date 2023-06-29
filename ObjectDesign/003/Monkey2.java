@@ -6,6 +6,7 @@ public class Monkey2 extends Ani
     Monkey2(String newName){
 
         super(newName);
+        name = newName;
 
     }
 

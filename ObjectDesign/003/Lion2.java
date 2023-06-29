@@ -6,6 +6,7 @@ public class Lion2 extends Ani
     Lion2(String newName){
 
         super(newName);
+        name = newName;
 
     }
 
