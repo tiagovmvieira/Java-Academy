@@ -21,8 +21,8 @@ public class XPathDemo {
         try {
 
             builder = domFactory.newDocumentBuilder();
-            String fileName = "/Users/ctw02162/Personal/Java-Academy/027/tvshows.xml";
-            doc = builder.parse(fileName);
+            String XMLFileName = "";
+            doc = builder.parse(XMLFileName);
 
         } catch (SAXException e){
 
